@@ -1,0 +1,28 @@
+﻿@page "/"
+@inject DataService DataService
+<PageTitle>Home</PageTitle>
+
+@if(measurement != null){
+    <div class="row g-3 mb-3">
+        <div class="col-md-6 col-xxl-3">
+            <MeasurementCard Caption="Battery State" Value="@measurement.BatteryStateDescription" />
+        </div>
+        <div class="col-md-6 col-xxl-3">
+            <MeasurementCard Caption="Panel Voltage" Value="@measurement.DispavgVpv.ToString()" Units="V" />
+        </div>
+        <div class="col-md-6 col-xxl-3">
+            <MeasurementCard Caption="Battery Voltage" Value="@measurement.DispavgVbatt.ToString()" Units="V"/>
+        </div>
+        <div class="col-md-6 col-xxl-3">
+            <MeasurementCard Caption="Amp Hours" Value="@measurement.AmpHours.ToString()" Units="Ah"/>
+        </div>
+    </div>
+}
+@code {
+    private Measurement measurement;
+
+    protected override async Task OnInitializedAsync()
+    {
+        measurement = await DataService.GetMostRecentMeasurement();
+    }
+}

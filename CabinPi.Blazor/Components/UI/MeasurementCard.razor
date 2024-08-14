@@ -1,0 +1,25 @@
+﻿<div class="card">
+    <div class="card-header pb-0">
+        <h6 class="mb-0 mt-2 d-flex align-items-center">@Caption</h6>
+    </div>
+    <div class="card-body d-flex flex-column justify-content-end">
+        <div class="row">
+            <div class="col">
+                <p class="lh-1 mb-1 fs-2">@Value <span>@Units</span></p>
+            </div>
+            <div class="col-auto ps-0">
+            </div>
+        </div>
+    </div>
+</div>
+@code {
+    [Parameter]
+    public string? Value { get; set; }
+
+    [Parameter]
+    public string? Caption { get; set; }
+
+    [Parameter]
+    public string? Units { get; set; }
+
+}
