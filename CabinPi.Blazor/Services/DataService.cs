@@ -1,5 +1,6 @@
 ﻿using CabinPi.Blazor.Models;
 using MySqlConnector;
+using System.Data;
 
 namespace CabinPi.Blazor.Services
 {
@@ -51,6 +52,11 @@ namespace CabinPi.Blazor.Services
                 inHg = reader.GetFloat("inHg"),
                 Int_C = reader.GetFloat("Int_C"),
                 Int_F = reader.GetFloat("Int_F"),
+                InverterOn = reader.IsDBNull("InverterOn") ? false : reader.GetBoolean("InverterOn"),
+                InverterMode = reader.IsDBNull("InverterMode") ? null : reader.GetInt32("InverterMode"),
+                InverterFault = reader.IsDBNull("InverterFault") ? null : reader.GetInt32("InverterFault"),
+                InverterVACOut = reader.IsDBNull("InverterVACOut") ? null : reader.GetFloat("InverterVACOut"),
+                InverterAACOut = reader.IsDBNull("InverterAACOut") ? null : reader.GetFloat("InverterAACOut"),
             };
         }
     }

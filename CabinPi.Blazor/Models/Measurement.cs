@@ -33,6 +33,11 @@ namespace CabinPi.Blazor.Models
         public float inHg { get; set; }
         public float Int_C { get; set; }
         public float Int_F { get; set; }
+        public bool? InverterOn { get; set; }
+        public int? InverterMode { get; set; }
+        public int? InverterFault { get; set; }
+        public float? InverterVACOut { get; set; }
+        public float? InverterAACOut { get; set; }
 
         public string BatteryStateDescription
         {

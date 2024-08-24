@@ -17,6 +17,26 @@
             <MeasurementCard Caption="Amp Hours" Value="@measurement.AmpHours.ToString()" Units="Ah"/>
         </div>
     </div>
+    <div class="row g-3 mb-3">
+        <div class="col-md-6 col-xxl-3">
+            <MeasurementCard Caption="Outside Temp" Value="@measurement.Ext_F.ToString()" Units="&deg;" />
+        </div>
+        <div class="col-md-6 col-xxl-3">
+            <MeasurementCard Caption="Inside Temp" Value="@measurement.Int_F.ToString()" Units="&deg;" />
+        </div>
+        <div class="col-md-6 col-xxl-3">
+            <MeasurementCard Caption="Humidity" Value="@measurement.Humidity.ToString()" Units="%" />
+        </div>
+        <div class="col-md-6 col-xxl-3">
+            <MeasurementCard Caption="Pressure" Value="@measurement.inHg.ToString()" Units="inHg" />
+        </div>
+    </div>
+
+    <div class="row g-3 mb-3">
+        <div class="col-md-6 col-xxl-6">
+            <LatestPictureCard />
+        </div>
+    </div>
 }
 @code {
     private Measurement measurement;
@@ -24,5 +44,6 @@
     protected override async Task OnInitializedAsync()
     {
         measurement = await DataService.GetMostRecentMeasurement();
+
     }
 }
