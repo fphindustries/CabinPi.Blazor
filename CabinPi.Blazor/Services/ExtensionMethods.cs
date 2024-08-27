@@ -12,7 +12,7 @@ namespace CabinPi.Blazor.Services
             return reader.IsDBNull(columnIndex) ? null : reader.GetInt32(columnIndex);
         }
 
-        public static T Get<T>(this IDataReader reader, string columnName)
+        public static T? Get<T>(this IDataReader reader, string columnName)
         {
             int columnIndex = reader.GetOrdinal(columnName);
             if (reader.IsDBNull(columnIndex))

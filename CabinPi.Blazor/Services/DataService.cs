@@ -13,7 +13,7 @@ namespace CabinPi.Blazor.Services
             _dataSource = dataSource;
         }
 
-        public async Task<Measurement> GetMostRecentMeasurement()
+        public async Task<Measurement?> GetMostRecentMeasurement()
         {
             await using var connection = await _dataSource.OpenConnectionAsync();
             await using var command = connection.CreateCommand();
