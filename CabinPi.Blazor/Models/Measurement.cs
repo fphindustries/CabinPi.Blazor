@@ -38,7 +38,18 @@ namespace CabinPi.Blazor.Models
         public int? InverterFault { get; set; }
         public float? InverterVACOut { get; set; }
         public float? InverterAACOut { get; set; }
-
+        public float? WindAverage {get;set;}
+        public float? WindGust {get;set;}
+        public int? WindDirection {get;set;}
+        public int? Illuminance {get;set;}
+        public float? UVIndex {get;set;}
+        public int? SolarRadiation {get;set;}
+        public float? RainRate {get;set;}
+        public float? AverageStrikeDistance {get;set;}
+        public int? StrikeCount {get;set;}  
+        public float? WeatherBattery {get;set;}
+        public float? DailyAccumulation {get;set;}
+        public float? ExternalHumidity {get;set;}
         public string BatteryStateDescription
         {
             get

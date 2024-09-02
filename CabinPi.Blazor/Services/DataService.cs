@@ -57,6 +57,18 @@ namespace CabinPi.Blazor.Services
                 InverterFault =  reader.Get<int?>("InverterFault"),
                 InverterVACOut = reader.Get<float?>("InverterVACOut"),
                 InverterAACOut = reader.Get<float?>("InverterAACOut"),
+                WindAverage = reader.Get<float?>("wind_avg"),
+                WindGust = reader.Get<float?>("wind_gust"),
+                WindDirection = reader.Get<int?>("wind_direction"),
+                Illuminance = reader.Get<int?>("illuminance"),
+                UVIndex = reader.Get<float?>("uv"),
+                SolarRadiation = reader.Get<int?>("solar_radiation"),
+                RainRate = reader.Get<float?>("rain"),
+                AverageStrikeDistance = reader.Get<float?>("avg_strike_distance"),
+                StrikeCount = reader.Get<int?>("strike_count"),
+                WeatherBattery = reader.Get<float?>("weather_battery"),
+                DailyAccumulation = reader.Get<float?>("daily_accumulation"),
+                ExternalHumidity = reader.Get<float?>("ext_humidity"),
             };
         }
     }

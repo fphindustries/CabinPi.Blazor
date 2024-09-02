@@ -25,10 +25,52 @@
             <MeasurementCard Caption="Inside Temp" Value="@measurement.Int_F.ToString()" Units="&deg;" />
         </div>
         <div class="col-md-6 col-xxl-3">
-            <MeasurementCard Caption="Humidity" Value="@measurement.Humidity.ToString()" Units="%" />
+            <MeasurementCard Caption="Inside Humidity" Value="@measurement.Humidity.ToString()" Units="%" />
         </div>
         <div class="col-md-6 col-xxl-3">
             <MeasurementCard Caption="Pressure" Value="@measurement.inHg.ToString()" Units="inHg" />
+        </div>
+    </div>
+    <div class="row g-3 mb-3">
+        <div class="col-md-6 col-xxl-3">
+            <MeasurementCard Caption="Wind Speed" Value="@measurement.WindAverage.ToString()" Units="mph" />
+        </div>
+        <div class="col-md-6 col-xxl-3">
+            <MeasurementCard Caption="Wind Direction" Value="@measurement.WindDirection.ToString()" Units="&deg;" />
+        </div>
+        <div class="col-md-6 col-xxl-3">
+            <MeasurementCard Caption="Wind Gusts" Value="@measurement.WindGust.ToString()" Units="mph" />
+        </div>
+        <div class="col-md-6 col-xxl-3">
+            <MeasurementCard Caption="Outside Humidity" Value="@measurement.ExternalHumidity.ToString()" Units="%" />
+        </div>
+    </div>
+    <div class="row g-3 mb-3">
+        <div class="col-md-6 col-xxl-3">
+            <MeasurementCard Caption="Rain" Value="@measurement.RainRate.ToString()" Units="in" />
+        </div>
+        <div class="col-md-6 col-xxl-3">
+            <MeasurementCard Caption="Daily Accumulation" Value="@measurement.DailyAccumulation.ToString()" Units="in" />
+        </div>
+        <div class="col-md-6 col-xxl-3">
+            <MeasurementCard Caption="Lightning Strikes" Value="@measurement.StrikeCount.ToString()" Units="" />
+        </div>
+        <div class="col-md-6 col-xxl-3">
+            <MeasurementCard Caption="Avg Strike Distance" Value="@measurement.AverageStrikeDistance.ToString()" Units="miles" />
+        </div>
+    </div>
+    <div class="row g-3 mb-3">
+        <div class="col-md-6 col-xxl-3">
+            <MeasurementCard Caption="Inverter On" Value="@measurement.InverterOn.ToString()" Units="" />
+        </div>
+        <div class="col-md-6 col-xxl-3">
+            <MeasurementCard Caption="Inverter Volts" Value="@measurement.InverterVACOut.ToString()" Units="V" />
+        </div>
+        <div class="col-md-6 col-xxl-3">
+            <MeasurementCard Caption="Inverter Amps" Value="@measurement.InverterAACOut.ToString()" Units="A" />
+        </div>
+        <div class="col-md-6 col-xxl-3">
+            <MeasurementCard Caption="Inverter Fault" Value="@measurement.InverterFault.ToString()" Units="" />
         </div>
     </div>
 
